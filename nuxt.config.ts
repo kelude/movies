@@ -1,5 +1,6 @@
 // const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = 'https://movies-proxy.vercel.app'
+// const apiBaseUrl = 'https://movies-proxy.vercel.app'
+const apiBaseUrl = 'https://movies-proxy-indol.vercel.app'
 
 export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/html-validator'],
