@@ -3,7 +3,8 @@ import { LRUCache } from 'lru-cache'
 import { hash as ohash } from 'ohash'
 
 // const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = 'https://movies-proxy.vercel.app'
+// const apiBaseUrl = 'https://movies-proxy.vercel.app'
+const apiBaseUrl = 'https://movies-proxy-indol.vercel.app'
 
 const promiseCache = new LRUCache<string, any>({
   max: 500,
