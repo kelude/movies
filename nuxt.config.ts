@@ -1,4 +1,4 @@
-const apiBaseUrl = process.env.TMDB_API_URL || process.env.API_BASE_URL || 'https://movies-proxy-indol.vercel.app'
+const apiBaseUrl = process.env.TMDB_API_URL || process.env.API_BASE_URL || 'https://movies-proxy.vercel.app'
 
 export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/html-validator'],
