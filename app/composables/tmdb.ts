@@ -11,8 +11,9 @@ const promiseCache = new LRUCache<string, any>({
 })
 
 async function _fetchTMDB(url: string, params: Record<string, string | number | boolean | undefined>) {
+  const baseURL = (useRuntimeConfig().public.apiBaseUrl as string) || apiBaseUrl
   return await $fetch(url, {
-    baseURL: `${apiBaseUrl}/tmdb`,
+    baseURL: `${baseURL}/tmdb`,
     params,
   })
 }
