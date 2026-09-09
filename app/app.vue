@@ -2,18 +2,21 @@
 import '@unocss/reset/tailwind.css'
 
 const { locale } = useI18n()
+const config = useRuntimeConfig()
+const appTitle = config.public.title || 'Nuxt Movies'
+const baseUrl = (config.public.baseUrl || 'https://movies.nuxt.space').replace(/\/$/, '')
 
 useHead(() => ({
   htmlAttrs: {
     lang: locale.value,
   },
   charset: 'utf-8',
-  title: 'Nuxt Movies',
-  titleTemplate: title => (title !== 'Nuxt Movies' ? `${title} · Nuxt Movies` : title),
+  title: appTitle,
+  titleTemplate: title => (title !== appTitle ? `${title} · ${appTitle}` : title),
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
     { name: 'description', content: 'A TMDB client built with Nuxt Image to show the potential of it ✨' },
-    { property: 'og:image', content: 'https://movies.nuxt.space/social-card.png' },
+    { property: 'og:image', content: `${baseUrl}/social-card.png` },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:site', content: '@nuxt_js' },
     { name: 'twitter:creator', content: '@nuxt_js' },

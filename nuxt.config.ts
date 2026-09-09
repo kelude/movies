@@ -1,6 +1,4 @@
-// const apiBaseUrl = 'http://localhost:3001'
-// const apiBaseUrl = 'https://movies-proxy.vercel.app'
-const apiBaseUrl = 'https://movies-proxy-indol.vercel.app'
+const apiBaseUrl = process.env.TMDB_API_URL || process.env.API_BASE_URL || 'https://movies-proxy-indol.vercel.app'
 
 export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/html-validator'],
@@ -29,6 +27,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl,
+      title: process.env.APP_TITLE || 'Nuxt Movies',
+      baseUrl: process.env.BASE_URL || 'https://movies.nuxt.space',
     },
   },
 
