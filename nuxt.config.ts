@@ -128,7 +128,7 @@ export default defineNuxtConfig({
       },
     ],
     langDir: 'internationalization',
-    defaultLocale: 'en',
+    defaultLocale: 'zh-CN',
   },
 
   htmlValidator: {
